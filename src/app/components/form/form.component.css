@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+
+.images-input-wrapper {
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+}
+
+.images-input-wrapper label {
+  margin-bottom: 10px;
+}
+
+.images-input {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  overflow: hidden;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  border: none;
+  color: #555;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.images-input::before {
+  content: "Upload image";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  text-align: center;
+  background-color: transparent;
+  color: #555;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.images-input:hover::before {
+  background-color: #eee;
+}
+
+.images-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.images-input:before {
+  content: 'Choose Image';
+  display: inline-block;
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.images-input:hover:before {
+  background-color: #003366;
+}
+
+.animated-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  padding-top: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+
+.animated-form div {
+  margin-bottom: 20px;
+  }
+
+.default-label {
+  display: inline-block;
+  padding-right: 10px;
+  text-align: center;
+  width: 180px;
+}
+
+.animated-select {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+  color: #555;
+  background-color: #f7f7f7;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  margin-right: 0px;
+}
+
+.animated-select:hover {
+  background-color: #eee;
+}
+
+.animated-input {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+  color: #555;
+  background-color: #f7f7f7;
+  padding: 10px 10px;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.animated-input:hover {
+  background-color: #eee;
+}
+
+.animated-button {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  background-color: #0066cc;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+:hover {
+  background-color: lightblue;
+  border-radius: 20px;
+  transition: background-color 0.4s ease;
+}
+
+.preview-image {
+  max-width: 300px;
+  max-height: 300px;
+  margin-top: 20px;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes zoom-in-from-above {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes zoom-out-from-below {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animated-form .preview-image.zoom-in-from-above {
+  animation-name: zoom-in-from-above;
+}
+
+.animated-form .preview-image.zoom-out-from-below {
+  animation-name: zoom-out-from-below;
+}
+
+.animated-form .preview-image.fade-in {
+  animation-name: fade-in;
+}
+
+.animated-form .preview-image.slide-in-from-left {
+  animation-name: slide-in-from-left;
+}

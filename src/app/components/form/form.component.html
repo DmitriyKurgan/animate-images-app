@@ -1,0 +1,42 @@
+<form [formGroup]="form" class="animated-form">
+  <div class="images-input-wrapper">
+   <div>
+     <label for="image" class="default-label">Image:</label>
+     <input type="file" formControlName="image" (change)="onImageChange($event)" class="images-input">
+   </div>
+    <img [src]="imageUrl" *ngIf="imageUrl" class="preview-image">
+  </div>
+  <div>
+    <label for="animation" class="default-label">Animation:</label>
+    <select formControlName="animation" class="animated-select">
+      <option value="">Select Animation</option>
+      <option value="zoom-in-from-above">Zoom In From Above</option>
+      <option value="zoom-out-from-below">Zoom Out From Below</option>
+      <option value="fade-in">Fade In</option>
+      <option value="slide-in-from-left">Slide In From Left</option>
+    </select>
+  </div>
+  <div>
+    <label for="imageSize" class="default-label">Image Size:</label>
+    <input type="number" formControlName="imageSize" class="animated-input">
+  </div>
+  <div>
+    <label for="containerWidth" class="default-label">Container Width:</label>
+    <input type="number" formControlName="containerWidth" class="animated-input">
+  </div>
+  <div>
+    <label for="containerHeight" class="default-label">Container Height:</label>
+    <input type="number" formControlName="containerHeight" class="animated-input">
+  </div>
+  <div>
+    <label for="imagePositionX" class="default-label">Image Position X:</label>
+    <input type="number" formControlName="imagePositionX" class="animated-input">
+  </div>
+  <div>
+    <label for="imagePositionY" class="default-label">Image Position Y:</label>
+    <input type="number" formControlName="imagePositionY" class="animated-input">
+  </div>
+  <div>
+    <button type="button" (click)="onDownload()" class="animated-button">Load HTML File</button>
+  </div>
+</form>
